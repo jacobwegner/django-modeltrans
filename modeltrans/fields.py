@@ -1,5 +1,5 @@
 from django.core.exceptions import ImproperlyConfigured
-from django.db.models import F, JSONField, fields
+from django.db.models import F, FileField, JSONField, fields
 from django.db.models.fields.json import KeyTextTransform
 from django.db.models.functions import Cast, Coalesce
 from django.utils.translation import gettext
@@ -12,7 +12,7 @@ from .utils import (
     get_language,
 )
 
-SUPPORTED_FIELDS = (fields.CharField, fields.TextField, JSONField)
+SUPPORTED_FIELDS = (fields.CharField, fields.TextField, FileField, JSONField)
 
 DEFAULT_LANGUAGE = get_default_language()
 
