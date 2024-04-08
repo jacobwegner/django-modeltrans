@@ -12,7 +12,7 @@ from .utils import (
     get_language,
 )
 
-SUPPORTED_FIELDS = (fields.CharField, fields.TextField)
+SUPPORTED_FIELDS = (fields.CharField, fields.TextField, fields.files.FileField)
 
 DEFAULT_LANGUAGE = get_default_language()
 
